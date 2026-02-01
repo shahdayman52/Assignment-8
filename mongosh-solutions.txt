@@ -27,19 +27,29 @@ db.createCollection("logs", {
 db.books.createIndex({ title: 1 });
 
 db.books.insertOne({
-  title: "Future",
-  year: 2020
+  "title": "newbookk",
+  "year": 2009,
+  "author":"shahd ayman",
+   "genres": ["Science Fiction"]
 });
 
 db.books.insertMany([
-  { title: "AI", year: 2021 },
-  { title: "Cloud", year: 2019 },
-  { title: "Security", year: 2018 }
-]);
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genres": ["Science Fiction", "Dystopian"],
+    "year": 1932
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "genres": ["Science Fiction", "Political"],
+    "year": 1949
+  }]);
 
 db.logs.insertOne({
-  message: "Server started",
-  time: new Date()
+  "action": "server borrowed ",
+  "bookId": "697f08546e801a57245f837f"
 });
 
 
